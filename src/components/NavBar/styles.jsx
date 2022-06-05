@@ -22,8 +22,20 @@ export const Nav = styled.nav`
     justify-content: space-around;
     border-bottom: 1.5px solid var(--color-white);
 
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
     h1 {
         color: var(--color-white);
+        padding-left: 5px;
+    }
+
+    img {
+        height: 35px;
     }
 
     ul {

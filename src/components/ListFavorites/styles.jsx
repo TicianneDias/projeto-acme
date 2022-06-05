@@ -53,9 +53,11 @@ export const FavoriteItem = styled.div`
     border-radius: 5px;
 
     &:hover {
-        border-left: 7px solid var(--color-red);
+        border-left: 7px solid var(--color-blue);
         background-color: var(--color-gray);
         opacity: 0.8;
         z-index: 1;
+        transition: all 0.3s ease;
+        cursor: pointer;
     }
 `;
