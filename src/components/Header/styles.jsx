@@ -6,7 +6,7 @@ export const HeaderContainer = styled.div`
     align-items: center;
     justify-content: center;
     text-align: start;
-    background-color: var(--color-primary);
+    background-image: linear-gradient(160deg, var(--color-primary), var(--color-lightdark));
     width: 100vw;
     height: 500px;
     position: relative;
@@ -62,7 +62,7 @@ export const HeaderPromotion = styled.div`
     height: 150px;
     width: 150px;
     position: absolute;
-    top: 70%;
+    top: 65%;
     left: 75%;
     
     h2 {

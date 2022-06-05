@@ -20,6 +20,7 @@ export const Nav = styled.nav`
     width: 100vw;
     height: 84px;
     justify-content: space-around;
+    border-bottom: 1.5px solid var(--color-white);
 
     h1 {
         color: var(--color-white);
