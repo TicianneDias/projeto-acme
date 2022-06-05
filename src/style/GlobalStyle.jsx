@@ -24,8 +24,12 @@ export default createGlobalStyle`
     }
 
     main {
-        max-width: 100rem;
+        max-width: 100vw;
         margin: 0 auto;
         padding: 5rem 1.2rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 `;
