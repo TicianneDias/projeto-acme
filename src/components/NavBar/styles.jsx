@@ -41,7 +41,7 @@ export const Nav = styled.nav`
         color: var(--color-white);
 
         &:hover {
-            color: var(--color-red);
+            color: var(--color-secundary);
             transition: all 0.5s ease-in-out;
         }
     }
