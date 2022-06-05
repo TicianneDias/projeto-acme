@@ -2,6 +2,7 @@ import React from 'react'
 import { Delivery, Nav, SearchBar, SearchContainer } from './styles'
 import { FiShoppingCart } from 'react-icons/fi'
 import { BiSearchAlt } from 'react-icons/bi'
+import IMG from '../../../favicon.png'
 
 const NavBar = () => {
   return (
@@ -10,7 +11,10 @@ const NavBar = () => {
             <p>Frete grátis para compras acima de R$150</p>
         </Delivery>
         <Nav>
-          <h1>ACME</h1>
+          <div>
+            <img src={IMG} alt=""/>
+            <h1>ACME</h1>
+          </div>
           <ul>
               <li><a href="">Produtos</a></li>
               <li><a href="">Favoritos</a></li>

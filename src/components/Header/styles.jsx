@@ -40,6 +40,7 @@ export const HeaderButton = styled.button`
     height: 60px;
     border-radius: 5px;
     border: 2px solid var(--color-white);
+    cursor: pointer;
     position: absolute;
     top: 50%;
     left: 45%;
@@ -51,7 +52,7 @@ export const HeaderButton = styled.button`
     }
 
     &:hover {
-        background-color: var(--color-lightdark);
+        background-color: var(--color-blue);
     }
     
 `;

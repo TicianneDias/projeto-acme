@@ -20,6 +20,7 @@ export default createGlobalStyle`
         --color-dark: #2C2A2A;
         --color-primary: #2E294E;
         --color-secundary: #8661C1;
+        --color-blue: #20A4F3;
         --color-red: #D64045;
     }
 
