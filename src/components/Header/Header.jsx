@@ -9,7 +9,7 @@ const Header = () => {
     <HeaderContainer>
         <img src={IMG} alt="Moça com um chapéu branco e camiseta branca comemorando com um braço levantado" />
         <h1>Descubra</h1>
-        <h2>Saiba mais sobre nossos produtos</h2>
+        <h2>Saiba mais sobre nossos produtos Acme</h2>
         <HeaderButton>
             <div>
                 <h3>Saiba Mais</h3>
