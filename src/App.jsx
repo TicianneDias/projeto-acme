@@ -1,12 +1,16 @@
 import React from 'react'
-import ShoppingCart from './pages/Shopping/ShoppingCart'
+import Favorites from './pages/Favorites/Favorites'
 import GlobalStyle from './style/GlobalStyle'
+import NavBar from '../src/components/NavBar/NavBar'
+import Footer from '../src/components/Footer/Footer'
 
 const App = () => {
   return (
     <div>
       <GlobalStyle/>
-      <ShoppingCart/>
+      <NavBar/>
+      <Favorites/>
+      <Footer/>
     </div>
   )
 }
