@@ -65,11 +65,12 @@ export const SearchContainer = styled.div`
     display: flex;
     align-items: center;
     position: relative;
+
     #searchIcon {
         position: absolute;
-        margin-left: 20px;
         color: var(--color-gray);
         font-size: 18px;
+        left: 5%;
     }
 
     `;
