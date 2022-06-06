@@ -1,12 +1,12 @@
 import React from 'react'
+import ProductsList from './pages/ProductsList/ProductsList'
 import GlobalStyle from './style/GlobalStyle'
-import Home from './pages/Home/Home'
 
 const App = () => {
   return (
     <div>
       <GlobalStyle/>
-      <Home/>
+      <ProductsList/>
     </div>
   )
 }
