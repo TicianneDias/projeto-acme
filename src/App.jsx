@@ -1,12 +1,12 @@
 import React from 'react'
-import ProductsList from './pages/ProductsList/ProductsList'
+import Product from './pages/Product/Product'
 import GlobalStyle from './style/GlobalStyle'
 
 const App = () => {
   return (
     <div>
       <GlobalStyle/>
-      <ProductsList/>
+      <Product/>
     </div>
   )
 }
