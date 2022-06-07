@@ -45,28 +45,10 @@ export const HeaderButton = styled.button`
     top: 50%;
     left: 45%;
 
-    
     div {
         display: grid;
         grid-template-columns: 1fr 0.3fr;
         align-items: center;
-        
-        a {
-            text-decoration: none;
-            color: var(--color-white);
-        }
-
-        p {
-            font-size: 1rem;
-            text-decoration: none;
-            color: var(--color-white);
-        }
-
-        #icon {
-            text-decoration: none;
-            color: var(--color-white);
-            
-        }
     }
 
     &:hover {
