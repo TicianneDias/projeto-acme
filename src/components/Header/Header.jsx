@@ -2,6 +2,7 @@ import React from 'react'
 import { HeaderButton, HeaderContainer, HeaderPromotion } from './styles'
 import IMG from '../../assets/images/ImageHeader.png'
 import {AiOutlineArrowRight} from 'react-icons/ai'
+import ProductsList from '../../pages/ProductsList/ProductsList'
 
 const Header = () => {
   return (
@@ -11,10 +12,12 @@ const Header = () => {
         <h1>Descubra</h1>
         <h2>Saiba mais sobre nossos produtos Acme</h2>
         <HeaderButton>
+          <a href="/ProductsList">
             <div>
-                <h3>Saiba Mais</h3>
+                <p>Saiba Mais</p>
                 <AiOutlineArrowRight id='icon'/>
-            </div>
+              </div>
+          </a>
         </HeaderButton>
         <HeaderPromotion>
             <h2>Até 30% Off!</h2>

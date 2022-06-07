@@ -6,7 +6,7 @@ const ListFavorites = () => {
     <>
         <FavoriteList>
           <h2>Mais Procurados</h2>
-          <h3><a href="">Ver Produtos</a></h3>
+          <h3><a href="/Favorites">Ver Produtos</a></h3>
         </FavoriteList>
         <FavoriteContainer>
             <FavoriteItem>

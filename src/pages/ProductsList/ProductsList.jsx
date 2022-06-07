@@ -7,7 +7,6 @@ import { ProductList, ProductItem } from './styles'
 const ProductsList = () => {
   return (
     <>
-        <NavBar/>
         <ProductList>
             <ProductItem>
 
@@ -47,7 +46,6 @@ const ProductsList = () => {
             </ProductItem>
         </ProductList>
         <ListFavorites/>
-        <Footer/>
     </>
   )
 }

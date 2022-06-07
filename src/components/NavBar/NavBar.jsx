@@ -13,12 +13,12 @@ const NavBar = () => {
         <Nav>
           <div>
             <img src={IMG} alt=""/>
-            <h1>ACME</h1>
+            <h1><a href='/'>ACME</a></h1>
           </div>
           <ul>
-              <li><a href="">Produtos</a></li>
-              <li><a href="">Favoritos</a></li>
-              <li><a href="">Carrinho</a></li>
+              <li><a href="/ProductsList">Produtos</a></li>
+              <li><a href="/Favorites">Favoritos</a></li>
+              <li><a href="/ShoppingCart">Carrinho</a></li>
           </ul>
           <SearchContainer>
             <BiSearchAlt id='searchIcon'/>
@@ -26,7 +26,7 @@ const NavBar = () => {
                 placeholder='Pesquisar Produto'>
             </SearchBar>
           </SearchContainer>
-          <a href=""><FiShoppingCart/></a>
+          <a href="/ShoppingCart"><FiShoppingCart/></a>
         </Nav>
     </>
   )
