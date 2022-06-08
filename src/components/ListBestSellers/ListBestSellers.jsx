@@ -103,38 +103,38 @@ while (count < 6) {
   const switchIconCartOne = () => {
     if(!clickOne) {
       setCartOne(<MdShoppingCart/>)
-      setClick(true)
+      setClickOne(true)
     } else {
       setCartOne(<MdOutlineAddShoppingCart/>)
-      setClick(false)
+      setClickOne(false)
     }
   }
   const switchIconCartTwo = () => {
     if(!clickTwo) {
       setCartTwo(<MdShoppingCart/>)
-      setClick(true)
+      setClickTwo(true)
     } else {
       setCartTwo(<MdOutlineAddShoppingCart/>)
-      setClick(false)
+      setClickTwo(false)
     }
   }
 
   const switchIconCartThree = () => {
     if(!clickThree) {
       setCartThree(<MdShoppingCart/>)
-      setClick(true)
+      setClickThree(true)
     } else {
       setCartThree(<MdOutlineAddShoppingCart/>)
-      setClick(false)
+      setClickThree(false)
     }
   }
   const switchIconCartFour = () => {
     if(!clickFour) {
       setCartFour(<MdShoppingCart/>)
-      setClick(true)
+      setClickFour(true)
     } else {
       setCartFour(<MdOutlineAddShoppingCart/>)
-      setClick(false)
+      setClickFour(false)
     }
   }
   
