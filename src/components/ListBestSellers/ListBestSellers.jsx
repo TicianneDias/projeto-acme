@@ -16,7 +16,7 @@ const ListBestSellers = () => {
 "Canga"
 ]
 
-const adjectives = [
+  const adjectives = [
 "prepotente", "valioso", "legítimo", "desleixado", "Natural", "inteligente", "disciplinado",
 "louvável", "amargurado", "honesto", "odioso", "vergonhoso", "horroroso", "magnífico", "gordo",
 "romântico", "sublime", "mesquinho", "injusto", "medroso", "otário", "quente", "intenso", "Sábio",
