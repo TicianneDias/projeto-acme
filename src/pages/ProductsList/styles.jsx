@@ -6,6 +6,24 @@ export const ProductList = styled.div`
     justify-content: space-around;
     margin: 0 7rem;
     padding-top: 50px;
+
+    @media(max-width: 1020px) {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    @media(max-width: 745px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(max-width: 505px) {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
     `;
 
 export const ProductItem = styled.div`
@@ -13,7 +31,7 @@ export const ProductItem = styled.div`
     height: 330px;
     width: 245px;
     position: relative;
-    margin-bottom: 50px;
+    margin: 15px;
 
     p {
         display: flex;

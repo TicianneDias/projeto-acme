@@ -12,7 +12,8 @@ const RoutesApp = () => {
     <>
         <Routes>
             <Route element={<Home/>} path='/'/>
-            <Route element={<Product/>} path='/Product'/>
+            <Route element={<Home/>} path='/Product/'/>
+            <Route element={<Product/>} path='/Product/:id'/>
             <Route element={<ProductsList/>} path='/ProductsList'/>
             <Route element={<Favorites/>} path='/Favorites'/>
             <Route element={<ShoppingCart/>} path='/ShoppingCart'/>

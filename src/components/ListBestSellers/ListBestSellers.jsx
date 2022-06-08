@@ -3,6 +3,7 @@ import axios from 'axios'
 import { TopList, TopListContainer, TopListItem } from './styles'
 import {BsHeart, BsHeartFill} from 'react-icons/bs'
 import {MdOutlineAddShoppingCart, MdShoppingCart} from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 
 const ListBestSellers = () => {
@@ -26,16 +27,25 @@ const ListBestSellers = () => {
 "windsurfista", "falso", "melhor", "terno"
 ]
 
+const body = document.body
+
 let randomNames = []
 let count = 0
 while (count < 6) {
+  let prodName = []
   let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
   let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
   let product = `${randomVerb} ${randomAdj}`
   randomNames.push(product)
+  prodName = localStorage.setItem('product', JSON.stringify(randomNames))
+  console.log(randomNames)
   count++
-        console.log(product)
+  
 }
+
+const LOCAL_STORAGE_KEY = "imagesList"
+const [imagesList, setImagesList] = useState()
+
   const [image, setImage] = useState([])
   const [clickOne, setClickOne] = useState(false)
   const [clickTwo, setClickTwo] = useState(false)
@@ -49,27 +59,27 @@ while (count < 6) {
   const [cartTwo, setCartTwo] = useState([<MdOutlineAddShoppingCart/>])
   const [cartThree, setCartThree] = useState([<MdOutlineAddShoppingCart/>])
   const [cartFour, setCartFour] = useState([<MdOutlineAddShoppingCart/>])
-
+  
   useEffect(() => {
-      axios.get(`https://picsum.photos/v2/list?page=${Math.round(Math.random() * 10)}`)
-           .then(res => setImage(res.data))
-           .catch(error => console.log(error))
+    axios.get(`https://picsum.photos/v2/list?page=${Math.round(Math.random() * 10)}`)
+    .then(res => setImage(res.data))
+    .catch(error => console.log(error))
   }, [])
-
+  
   const photoList = image.map((image) =>{
     return (
         <img key={image.id} src={image.download_url} alt={`image_${image.id}`} style={{width:'100%'}}/>
-    )
-})
-
-
-  const switchIconFavOne = () => {
-    if(!clickOne) {
-      setFavoriteOne(<BsHeartFill/>)
-      setClickOne(true)
-    } else {
-      setFavoriteOne(<BsHeart/>)
-      setClickOne(false)
+        )
+      })
+      
+      
+      const switchIconFavOne = () => {
+        if(!clickOne) {
+          setFavoriteOne(<BsHeartFill/>)
+          setClickOne(true)
+        } else {
+          setFavoriteOne(<BsHeart/>)
+          setClickOne(false)
     }
   }
   const switchIconFavTwo = () => {
@@ -99,7 +109,7 @@ while (count < 6) {
       setClickFour(false)
     }
   }
-
+  
   const switchIconCartOne = () => {
     if(!clickOne) {
       setCartOne(<MdShoppingCart/>)
@@ -118,7 +128,7 @@ while (count < 6) {
       setClickTwo(false)
     }
   }
-
+  
   const switchIconCartThree = () => {
     if(!clickThree) {
       setCartThree(<MdShoppingCart/>)
@@ -147,7 +157,7 @@ while (count < 6) {
         <TopListContainer>
             <TopListItem>
               <p>{randomNames[0]}</p>
-              {photoList[0]}
+              <Link to={`/Product/${image.id}`} key={image.id}>{photoList[0]}</Link>
               <h6>
                 O produto {randomNames[0]} é perfeito para o seu dia a dia, ajudando nas suas tarefas diárias de casa.
               </h6>

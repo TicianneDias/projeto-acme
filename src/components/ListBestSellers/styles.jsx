@@ -8,7 +8,7 @@ export const TopList = styled.div`
     align-items: center;
     color: var(--color-lightdark);
     position: relative;
-
+    
     a {
         text-decoration: none;
         color: var(--color-lightdark);
@@ -16,56 +16,95 @@ export const TopList = styled.div`
         top: 50%;
         left: 85%;
         font-weight: 200;
-
+        
         &:hover {
             color: var(--color-secundary);
             transition: all 0.3s ease-in-out;
         }
-
+        
     }
-
+    
     h2 {
         position: absolute;
         top: 35%;
         left: 5%;
     }
-`;
+    
+    @media(max-width: 905px) {
+        h2 {
+            top: auto;
+            left: auto;
+        }
+        a {
+            top: auto;
+            left: 80%;
+        }
+    }
+
+    @media(max-width: 585px) {
+        a {
+            left: 60%;
+        }
+    }
+
+    
+    `;
 
 export const TopListContainer = styled.div`
-    background-color: var(--color-white);
-    height: 400px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
+background-color: var(--color-white);
+height: 400px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+position: relative;
+margin: auto;
+
+    @media(max-width: 1020px) {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    @media(max-width: 745px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(max-width: 505px) {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 `;
 
 export const TopListItem = styled.div`
-    background-color: var(--color-gray);
-    height: 330px;
-    width: 245px;
-    position: relative;
+background-color: var(--color-gray);
+height: 330px;
+width: 245px;
+position: relative;
+margin: 15px auto;
 
-    p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        font-size: 1.1rem;
-    }
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.1rem;
+}
 
-    h6 {
-        padding: 10px;
-        text-align: justify;
-    }
+h6 {
+    padding: 10px;
+    text-align: justify;
+}
 
-    img {
-        z-index: 999;
-        width: 150px;
+img {
+    z-index: 999;
+    width: 150px;
         height: 150px;
     }
-
+    
     #iconFav, #iconCart {
         width: 40px;
         height: 40px;
@@ -82,9 +121,10 @@ export const TopListItem = styled.div`
         color: var(--color-red);
         left: 63%;
     }
-
+    
     #iconCart {
         color: var(--color-blue);
         left: 80%;
     }
-`;
+    
+    `;

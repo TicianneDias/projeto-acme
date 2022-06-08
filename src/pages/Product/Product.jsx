@@ -1,13 +1,10 @@
 import React from 'react'
-import NavBar from '../../components/NavBar/NavBar'
-import Footer from '../../components/Footer/Footer'
 import ListBestSellers from '../../components/ListBestSellers/ListBestSellers'
 import { ProductContainer, ProductDescription, ProductImage, ShoppingButton } from './styles'
 
 const Product = () => {
   return (
     <>
-        <NavBar/>
         <ProductContainer>
             <ProductImage>
 
@@ -21,7 +18,6 @@ const Product = () => {
             </ProductDescription>
         </ProductContainer>
         <ListBestSellers/>
-        <Footer/>
     </>
   )
 }

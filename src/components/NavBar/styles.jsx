@@ -59,6 +59,14 @@ export const Nav = styled.nav`
         }
     }
 
+    @media(max-width: 427px) {
+        justify-content: center;
+
+        #cartIcon {
+            display: none;
+        }
+    }
+
 `;
 
 export const SearchContainer = styled.div`
@@ -72,11 +80,24 @@ export const SearchContainer = styled.div`
         font-size: 18px;
         left: 5%;
     }
+    @media(max-width: 770px) {
+        display: none;
 
+        #searchIcon {
+            display: none;
+        }
+    }
     `;
 
 export const SearchBar = styled.input`
     width: 336px;
     padding: 12px 56px 12px 40px;
     border-radius: 5px;
-`;
+    @media(max-width: 770px) {
+        display: none;
+
+        #searchIcon {
+            display: none;
+        }
+    }
+    `;

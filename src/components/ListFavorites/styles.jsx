@@ -29,6 +29,23 @@ export const FavoriteList = styled.div`
         top: 35%;
         left: 5%;
     }
+
+    @media(max-width: 905px) {
+        h2 {
+            top: auto;
+            left: auto;
+        }
+        a {
+            top: auto;
+            left: 80%;
+        }
+    }
+
+    @media(max-width: 585px) {
+        a {
+            left: 60%;
+        }
+    }
 `;
 
 export const FavoriteContainer = styled.div`
@@ -39,6 +56,17 @@ export const FavoriteContainer = styled.div`
     align-items: center;
     justify-content: space-around;
     position: relative;
+
+    @media(max-width: 1042px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        height: auto;
+    }
+
+    @media(max-width: 690px) {
+        grid-template-columns: 1fr;
+    }
 
 `;
 
@@ -77,4 +105,9 @@ export const FavoriteItem = styled.div`
     img {
         border-radius: 0 5px 5px 0;
     }
+
+    @media(max-width: 1042px) {
+        margin: 15px auto;
+    }
+    
 `;
