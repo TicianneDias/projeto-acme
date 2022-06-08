@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import { TopList, TopListContainer, TopListItem } from './styles'
-import ImageProducts from '../../api/ImageProducts'
 import {BsHeart, BsHeartFill} from 'react-icons/bs'
 import {MdOutlineAddShoppingCart, MdShoppingCart} from 'react-icons/md'
 
@@ -38,9 +37,18 @@ while (count < 6) {
         console.log(product)
 }
   const [image, setImage] = useState([])
-  const [click, setClick] = useState(false)
-  const [favorite, setFavorite] = useState([<BsHeart/>])
-  const [cart, setCart] = useState([<MdOutlineAddShoppingCart/>])
+  const [clickOne, setClickOne] = useState(false)
+  const [clickTwo, setClickTwo] = useState(false)
+  const [clickThree, setClickThree] = useState(false)
+  const [clickFour, setClickFour] = useState(false)
+  const [favoriteOne, setFavoriteOne] = useState([<BsHeart/>])
+  const [favoriteTwo, setFavoriteTwo] = useState([<BsHeart/>])
+  const [favoriteThree, setFavoriteThree] = useState([<BsHeart/>])
+  const [favoriteFour, setFavoriteFour] = useState([<BsHeart/>])
+  const [cartOne, setCartOne] = useState([<MdOutlineAddShoppingCart/>])
+  const [cartTwo, setCartTwo] = useState([<MdOutlineAddShoppingCart/>])
+  const [cartThree, setCartThree] = useState([<MdOutlineAddShoppingCart/>])
+  const [cartFour, setCartFour] = useState([<MdOutlineAddShoppingCart/>])
 
   useEffect(() => {
       axios.get(`https://picsum.photos/v2/list?page=${Math.round(Math.random() * 10)}`)
@@ -55,22 +63,77 @@ while (count < 6) {
 })
 
 
-  const switchIconFavorite = () => {
-    if(!click) {
-      setFavorite(<BsHeartFill/>)
+  const switchIconFavOne = () => {
+    if(!clickOne) {
+      setFavoriteOne(<BsHeartFill/>)
+      setClickOne(true)
+    } else {
+      setFavoriteOne(<BsHeart/>)
+      setClickOne(false)
+    }
+  }
+  const switchIconFavTwo = () => {
+    if(!clickTwo) {
+      setFavoriteTwo(<BsHeartFill/>)
+      setClickTwo(true)
+    } else {
+      setFavoriteTwo(<BsHeart/>)
+      setClickTwo(false)
+    }
+  }
+  const switchIconFavThree = () => {
+    if(!clickThree) {
+      setFavoriteThree(<BsHeartFill/>)
+      setClickThree(true)
+    } else {
+      setFavoriteThree(<BsHeart/>)
+      setClickThree(false)
+    }
+  }
+  const switchIconFavFour = () => {
+    if(!clickFour) {
+      setFavoriteFour(<BsHeartFill/>)
+      setClickFour(true)
+    } else {
+      setFavoriteFour(<BsHeart/>)
+      setClickFour(false)
+    }
+  }
+
+  const switchIconCartOne = () => {
+    if(!clickOne) {
+      setCartOne(<MdShoppingCart/>)
       setClick(true)
     } else {
-      setFavorite(<BsHeart/>)
+      setCartOne(<MdOutlineAddShoppingCart/>)
+      setClick(false)
+    }
+  }
+  const switchIconCartTwo = () => {
+    if(!clickTwo) {
+      setCartTwo(<MdShoppingCart/>)
+      setClick(true)
+    } else {
+      setCartTwo(<MdOutlineAddShoppingCart/>)
       setClick(false)
     }
   }
 
-  const switchIconCart = () => {
-    if(!click) {
-      setCart(<MdShoppingCart/>)
+  const switchIconCartThree = () => {
+    if(!clickThree) {
+      setCartThree(<MdShoppingCart/>)
       setClick(true)
     } else {
-      setCart(<MdOutlineAddShoppingCart/>)
+      setCartThree(<MdOutlineAddShoppingCart/>)
+      setClick(false)
+    }
+  }
+  const switchIconCartFour = () => {
+    if(!clickFour) {
+      setCartFour(<MdShoppingCart/>)
+      setClick(true)
+    } else {
+      setCartFour(<MdOutlineAddShoppingCart/>)
       setClick(false)
     }
   }
@@ -85,26 +148,38 @@ while (count < 6) {
             <TopListItem>
               <p>{randomNames[0]}</p>
               {photoList[0]}
-              <button id='iconFav' value={click} onClick={switchIconFavorite}>{favorite}</button>
-              <button id='iconCart' value={click} onClick={switchIconCart}>{cart}</button>
+              <h6>
+                O produto {randomNames[0]} é perfeito para o seu dia a dia, ajudando nas suas tarefas diárias de casa.
+              </h6>
+              <button id='iconFav' value={clickOne} onClick={switchIconFavOne}>{favoriteOne}</button>
+              <button id='iconCart' value={clickOne} onClick={switchIconCartOne}>{cartOne}</button>
             </TopListItem>
             <TopListItem>
             <p>{randomNames[1]}</p>
               {photoList[1]}
-              <button id='iconFav' value={click} onClick={switchIconFavorite}>{favorite}</button>
-              <button id='iconCart' value={click} onClick={switchIconCart}>{cart}</button>
+              <h6>
+                O produto {randomNames[1]} é te ajudará a melhorar sua auto estima e conquistar sua auto confiança.
+              </h6>
+              <button id='iconFav' value={clickTwo} onClick={switchIconFavTwo}>{favoriteTwo}</button>
+              <button id='iconCart' value={clickTwo} onClick={switchIconCartTwo}>{cartTwo}</button>
             </TopListItem>
             <TopListItem>
             <p>{randomNames[2]}</p>
               {photoList[2]}
-              <button id='iconFav' value={click} onClick={switchIconFavorite}>{favorite}</button>
-              <button id='iconCart' value={click} onClick={switchIconCart}>{cart}</button>
+              <h6>
+                Com {randomNames[2]} você ouvirá os melhores graves que um produto pode lhe oferecer.
+              </h6>
+              <button id='iconFav' value={clickThree} onClick={switchIconFavThree}>{favoriteThree}</button>
+              <button id='iconCart' value={clickThree} onClick={switchIconCartThree}>{cartThree}</button>
             </TopListItem>
             <TopListItem>
-            <p>{randomNames[3]}</p>
+              <p>{randomNames[3]}</p>
               {photoList[9]}
-              <button id='iconFav' value={click} onClick={switchIconFavorite}>{favorite}</button>
-              <button id='iconCart' value={click} onClick={switchIconCart}>{cart}</button>
+              <h6>
+                O produto {randomNames[3]} te oferecerá grandes experiências e sofisticação.
+              </h6>
+              <button id='iconFav' value={clickFour} onClick={switchIconFavFour}>{favoriteFour}</button>
+              <button id='iconCart' value={clickFour} onClick={switchIconCartFour}>{cartFour}</button>
             </TopListItem>
         </TopListContainer>
 
