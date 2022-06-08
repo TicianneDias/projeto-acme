@@ -44,4 +44,40 @@ export const TopListItem = styled.div`
     background-color: var(--color-gray);
     height: 330px;
     width: 245px;
+    position: relative;
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+
+    img {
+        z-index: 999;
+        width: 150px;
+        height: 150px;
+    }
+
+    #iconFav, #iconCart {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+        margin: 1px;
+        border-radius: 15px;
+        position: relative;
+        top: 25%;
+        left: 63%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #iconFav {
+        color: var(--color-red);
+    }
+
+    #iconCart {
+        color: var(--color-blue);
+    }
 `;

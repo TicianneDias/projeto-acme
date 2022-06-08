@@ -9,18 +9,16 @@ const ImageProducts = () => {
              .then(res => setImage(res.data))
              .catch(error => console.log(error))
     }, [])
+
+    const photoList = image.map((image) =>{
+        return (
+            <img key={image.id} src={image.download_url} alt={`image_${image.id}`} />
+        )
+    })
     
     return (
         <>
-        {image.map(img => {
-            return (
-                <div>
-                  <img key={img.id} src={img.download_url} style={{width:'50px', height:'50px'}}/>
-                </div>
-            )
-            
-        })}
-
+            {photoList}
         </>
     )
 }

@@ -34,7 +34,7 @@ const NameProducts = () => {
     }
 
   return (
-    <div></div>
+    NameProducts
   )
 }
 
