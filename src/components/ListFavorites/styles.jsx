@@ -38,6 +38,7 @@ export const FavoriteContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    position: relative;
 
 `;
 
@@ -46,7 +47,7 @@ export const FavoriteItem = styled.div`
     width: 340px;
     height: 250px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     border-left: 7px solid var(--color-secundary);
@@ -59,5 +60,21 @@ export const FavoriteItem = styled.div`
         z-index: 1;
         transition: all 0.3s ease;
         cursor: pointer;
+    }
+
+    h3 {
+        flex-direction: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: baseline;
+        position: absolute;
+        color: var(--color-white);
+        text-shadow: 1px 1px 1px var(--color-dark);
+        background-color: var(--color-primary);
+        padding: 4px 50px;
+    }
+
+    img {
+        border-radius: 0 5px 5px 0;
     }
 `;

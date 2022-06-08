@@ -38,6 +38,7 @@ export const TopListContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    position: relative;
 `;
 
 export const TopListItem = styled.div`
@@ -54,6 +55,11 @@ export const TopListItem = styled.div`
         font-size: 1.1rem;
     }
 
+    h6 {
+        padding: 10px;
+        text-align: justify;
+    }
+
     img {
         z-index: 999;
         width: 150px;
@@ -66,18 +72,19 @@ export const TopListItem = styled.div`
         font-size: 1.3rem;
         margin: 1px;
         border-radius: 15px;
-        position: relative;
-        top: 25%;
-        left: 63%;
+        position: absolute;
+        top: 85%;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
     }
-
+    
     #iconFav {
         color: var(--color-red);
+        left: 63%;
     }
 
     #iconCart {
         color: var(--color-blue);
+        left: 80%;
     }
 `;
