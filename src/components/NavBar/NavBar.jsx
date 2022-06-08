@@ -26,7 +26,7 @@ const NavBar = () => {
                 placeholder='Pesquisar Produto'>
             </SearchBar>
           </SearchContainer>
-          <a href="/ShoppingCart"><FiShoppingCart/></a>
+          <a href="/ShoppingCart" id='cartIcon'><FiShoppingCart/></a>
         </Nav>
     </>
   )

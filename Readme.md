@@ -27,7 +27,7 @@ Projeto desenvolvido para mostrar produtos de uma empresa fictícia chamada Acme
 Em Home é mostrado uma lista de produtos mais procurados e outros mais vendidos, com a possibilidade de adicionar o produto a favoritos ou carrinho.
 Em Produtos segue a mesma linha, mas ao invés de mostrar 4 produtos mais procurados, mostra uma lista de 8 produtos.
 
-Para adicionar: conseguir puxar os dados para página de favoritos, produto individual e carrinho, localstorage, responsividade, ajustar o botão de Pesquisar do Nav.
+Para adicionar: conseguir puxar os dados para página de favoritos, produto individual e carrinho, localstorage, colocar funcionalidade no botão de Pesquisar do Nav.
 
 <br>
 <br><br>

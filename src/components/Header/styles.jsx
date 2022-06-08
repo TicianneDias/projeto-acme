@@ -73,4 +73,8 @@ export const HeaderPromotion = styled.div`
         color: var(--color-primary);
         margin-left: -10px;
     }
+
+    @media(max-width: 590px) {
+        left: 50%;
+    }
 `;
