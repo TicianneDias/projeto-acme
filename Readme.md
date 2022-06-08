@@ -13,7 +13,7 @@
 
 ## 🎞 Demo: <a id="demo"></a>
 <div align="center">
-    🚧 Em fase de construção 🚧
+    <img alt="Demonstração do site, mostrando os produtos, a mudança de estado dos ícones para favoritar ou adicionar ao carrinho" src="page.gif" style="width:600px">
 </div>
 
 <br> <br> <br>
