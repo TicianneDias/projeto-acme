@@ -23,7 +23,11 @@
 <br> <br> <br>
 
 ## 💡 Sobre: <a id="sobre"></a>
-Projeto desenvolvido para mostrar produtos de uma empresa fictícia chamada Acme onde o usuário poderá ver a lista de produtos e fazer outras funcionalidades através dessa lista.
+Projeto desenvolvido para mostrar produtos de uma empresa fictícia chamada Acme onde o usuário poderá ver a lista de produtos e fazer outras funcionalidades através dessa lista como favoritar e colocar no carrinho.
+Em Home é mostrado uma lista de produtos mais procurados e outros mais vendidos, com a possibilidade de adicionar o produto a favoritos ou carrinho.
+Em Produtos segue a mesma linha, mas ao invés de mostrar 4 produtos mais procurados, mostra uma lista de 8 produtos.
+
+Para adicionar: conseguir puxar os dados para página de favoritos, produto individual e carrinho, localstorage, responsividade, ajustar o botão de Pesquisar do Nav.
 
 <br>
 <br><br>
@@ -36,7 +40,12 @@ Projeto desenvolvido para mostrar produtos de uma empresa fictícia chamada Acme
 
 ## 💻 Tecnologias: <a id="tecnologias"></a>
 <ul>
-    <li>🚧 Em fase de construção 🚧</li>
+    <li>React.js</li>
+    <li>Rooks: useState, useEffect</li>
+    <li>React Router Dom</li>
+    <li>Figma</li>
+    <li>Styles-components</li>
+    <li>Axios</li>
 </ul>
 
 
