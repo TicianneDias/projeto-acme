@@ -13,7 +13,7 @@ export const FavoriteList = styled.div`
         text-decoration: none;
         color: var(--color-lightdark);
         position: absolute;
-        top: 50%;
+        top: 33%;
         left: 85%;
         font-weight: 200;
 
@@ -32,11 +32,11 @@ export const FavoriteList = styled.div`
 
     @media(max-width: 905px) {
         h2 {
-            top: auto;
+            top: center;
             left: auto;
         }
         a {
-            top: auto;
+            top: center;
             left: 80%;
         }
     }
