@@ -30,13 +30,18 @@ const ProductsList = () => {
     
     let randomNames = []
     let count = 0
-    while (count < 8) {
+    while (count < 12) {
+      let prodName = []
       let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
       let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
       let product = `${randomVerb} ${randomAdj}`
+      if(localStorage.getItem('product')){
+        randomNames = JSON.parse(localStorage.getItem('product'))
+      }
       randomNames.push(product)
+      prodName = localStorage.setItem('product', JSON.stringify(randomNames))
+      //console.log(randomNames)
       count++
-            console.log(product)
     }
       const [image, setImage] = useState([])
       const [clickOne, setClickOne] = useState(false)
