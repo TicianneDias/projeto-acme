@@ -2,6 +2,7 @@
 
 <p align="center">
     <a href="#demo" style="margin:10px">Demo</a>
+    <a href="#instalar" style="margin:10px">Instalação</a>
     <a href="#sobre" style="margin:10px">Sobre</a>
     <a href="#tecnologias" style="margin:10px">Tecnologias</a>
     <a href="#sobremim" style="margin:10px">Sobre mim</a>
@@ -14,6 +15,22 @@
 ## 🎞 Demo: <a id="demo"></a>
 <div align="center">
     <img alt="Demonstração do site, mostrando os produtos, a mudança de estado dos ícones para favoritar ou adicionar ao carrinho" src="page.gif" style="width:600px">
+</div>
+
+<br> <br> <br>
+
+---
+
+<br> <br> <br>
+
+## ⚙️ Instalação: <a id="instalar"></a>
+<div align="center">
+No seu terminal utilize: <code> git clone https://github.com/TicianneDias/projeto-acme.git </code><br>
+Entre na pasta: <code>cd projeto-acme</code><br>
+Instale as dependências necessárias com: <code>npm install</code><br>
+Projeto foi utilizado com Vite, para rodar use: <code>npm run dev</code><br>
+Para entrar no site colocado no Netlify, <a href='https://famous-clafoutis-be2c71.netlify.app/'>clique aqui.</a>
+    
 </div>
 
 <br> <br> <br>
