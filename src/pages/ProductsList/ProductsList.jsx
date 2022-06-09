@@ -29,17 +29,21 @@ const ProductsList = () => {
     ]
     
     let randomNames = []
+    let prodName = []
+    let nameProd = []
     let count = 0
-    while (count < 8) {
-      let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
-      let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
-      let product = `${randomVerb} ${randomAdj}`
-      randomNames.push(product)
-      count++
-            console.log(product)
-    }
-      const [image, setImage] = useState([])
-      const [clickOne, setClickOne] = useState(false)
+  while (count < 12) {
+    let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
+    let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
+    let product = `${randomVerb} ${randomAdj}`
+    randomNames.push(product)
+    prodName = localStorage.getItem('name', count++)
+    nameProd= JSON.parse(prodName)
+    console.log(prodName)
+    count++ 
+  }
+  const [image, setImage] = useState([])
+  const [clickOne, setClickOne] = useState(false)
       const [clickTwo, setClickTwo] = useState(false)
       const [clickThree, setClickThree] = useState(false)
       const [clickFour, setClickFour] = useState(false)
@@ -237,73 +241,73 @@ const ProductsList = () => {
     <>
         <ProductList>
             <ProductItem>
-            <p>{randomNames[0]}</p>
+            <p>{nameProd[0]}</p>
               {photoList[0]}
               <h6>
-                O produto {randomNames[0]} é perfeito para o seu dia a dia, ajudando nas suas tarefas diárias de casa.
+                O produto {nameProd[0]} é perfeito para o seu dia a dia, ajudando nas suas tarefas diárias de casa.
               </h6>
               <button id='iconFav' value={clickOne} onClick={switchIconFavOne}>{favoriteOne}</button>
               <button id='iconCart' value={clickOne} onClick={switchIconCartOne}>{cartOne}</button>
             </ProductItem>
             <ProductItem>
-            <p>{randomNames[1]}</p>
+            <p>{nameProd[1]}</p>
               {photoList[1]}
               <h6>
-                O produto {randomNames[1]} é perfeito para o seu dia a dia, ajudando nas suas tarefas diárias de casa.
+                O produto {nameProd[1]} é perfeito para o seu dia a dia, ajudando nas suas tarefas diárias de casa.
               </h6>
               <button id='iconFav' value={clickTwo} onClick={switchIconFavTwo}>{favoriteTwo}</button>
               <button id='iconCart' value={clickTwo} onClick={switchIconCartTwo}>{cartTwo}</button>
             </ProductItem>
             <ProductItem>
-            <p>{randomNames[2]}</p>
+            <p>{nameProd[2]}</p>
               {photoList[2]}
               <h6>
-                Com {randomNames[2]} você ouvirá os melhores graves que um produto pode lhe oferecer.
+                Com {nameProd[2]} você ouvirá os melhores graves que um produto pode lhe oferecer.
               </h6>
               <button id='iconFav' value={clickThree} onClick={switchIconFavThree}>{favoriteThree}</button>
               <button id='iconCart' value={clickThree} onClick={switchIconCartThree}>{cartThree}</button>
             </ProductItem>
             <ProductItem>
-            <p>{randomNames[3]}</p>
+            <p>{nameProd[3]}</p>
               {photoList[9]}
               <h6>
-                O produto {randomNames[3]} te oferecerá grandes experiências e sofisticação.
+                O produto {nameProd[3]} te oferecerá grandes experiências e sofisticação.
               </h6>
               <button id='iconFav' value={clickFour} onClick={switchIconFavFour}>{favoriteFour}</button>
               <button id='iconCart' value={clickFour} onClick={switchIconCartFour}>{cartFour}</button>
             </ProductItem>
             <ProductItem>
-            <p>{randomNames[4]}</p>
+            <p>{nameProd[4]}</p>
               {photoList[10]}
               <h6>
-                O produto {randomNames[4]} será perfeito para o seu uso no dia-a-dia.
+                O produto {nameProd[4]} será perfeito para o seu uso no dia-a-dia.
               </h6>
               <button id='iconFav' value={clickFive} onClick={switchIconFavFive}>{favoriteFive}</button>
               <button id='iconCart' value={clickFive} onClick={switchIconCartFive}>{cartFive}</button>
             </ProductItem>
             <ProductItem>
-            <p>{randomNames[5]}</p>
+            <p>{nameProd[5]}</p>
               {photoList[11]}
               <h6>
-                O produto {randomNames[5]} traz o aroma que você precisa para usar no seu trabalho.
+                O produto {nameProd[5]} traz o aroma que você precisa para usar no seu trabalho.
               </h6>
               <button id='iconFav' value={clickSix} onClick={switchIconFavSix}>{favoriteSix}</button>
               <button id='iconCart' value={clickSix} onClick={switchIconCartSix}>{cartSix}</button>
             </ProductItem>
             <ProductItem>
-            <p>{randomNames[6]}</p>
+            <p>{nameProd[6]}</p>
               {photoList[12]}
               <h6>
-               Com {randomNames[6]} você conseguirá vencer grandes batalhas diárias.
+               Com {nameProd[6]} você conseguirá vencer grandes batalhas diárias.
               </h6>
               <button id='iconFav' value={clickSeven} onClick={switchIconFavSeven}>{favoriteSeven}</button>
               <button id='iconCart' value={clickSeven} onClick={switchIconCartSeven}>{cartSeven}</button>
             </ProductItem>
             <ProductItem>
-            <p>{randomNames[7]}</p>
+            <p>{nameProd[8]}</p>
               {photoList[13]}
               <h6>
-                A {randomNames[7]} traz o aroma perfeito que sua casa está precisando.
+                A {nameProd[8]} traz o aroma perfeito que sua casa está precisando.
               </h6>
               <button id='iconFav' value={clickEight} onClick={switchIconFavEight}>{favoriteEight}</button>
               <button id='iconCart' value={clickEight} onClick={switchIconCartEight}>{cartEight}</button>

@@ -6,43 +6,44 @@ import {MdOutlineAddShoppingCart, MdShoppingCart} from 'react-icons/md'
 import { Link } from 'react-router-dom'
 
 
+
+
 const ListBestSellers = () => {
   const verbs = [
-"Armário", "Navio", "Mala", "Base", "Hidroavião", "Revista", "Carretel", "Minissaia", "Tamborim",
-"Andador", "Geladeira", "Estátua", "Rolo", "Crachá", "Peneira", "Bafômetro", "Desentupidor",
-"Guarda-chuva", "Espanador", "Escudo", "Raquete", "Vaso sanitário", "Lancheira", "Cofre",
-"Helióstato", "Medalha", "Foguete", "Lata", "Sintetizador", "Grampo", "Bucha", "Catraca",
-"Alfinete", "Caneca", "Fita", "Moeda", "Gel", "Maquete", "Interfone", "Gaveta", "Helicóptero",
-"Vela de cera", "Quimono", "Necessaire", "Machado", "Tecido", "Vareta de freio", "Obra de arte",
-"Canga"
-]
-
+  "Armário", "Navio", "Mala", "Base", "Hidroavião", "Revista", "Carretel", "Minissaia", "Tamborim",
+  "Andador", "Geladeira", "Estátua", "Rolo", "Crachá", "Peneira", "Bafômetro", "Desentupidor",
+  "Guarda-chuva", "Espanador", "Escudo", "Raquete", "Vaso sanitário", "Lancheira", "Cofre",
+  "Helióstato", "Medalha", "Foguete", "Lata", "Sintetizador", "Grampo", "Bucha", "Catraca",
+  "Alfinete", "Caneca", "Fita", "Moeda", "Gel", "Maquete", "Interfone", "Gaveta", "Helicóptero",
+  "Vela de cera", "Quimono", "Necessaire", "Machado", "Tecido", "Vareta de freio", "Obra de arte",
+  "Canga"
+  ]
+  
   const adjectives = [
-"prepotente", "valioso", "legítimo", "desleixado", "Natural", "inteligente", "disciplinado",
-"louvável", "amargurado", "honesto", "odioso", "vergonhoso", "horroroso", "magnífico", "gordo",
-"romântico", "sublime", "mesquinho", "injusto", "medroso", "otário", "quente", "intenso", "Sábio",
-"zeloso", "desapegado", "faceiro", "companheiro", "empenhado", "espantoso", "traidor",
-"perfeccionista", "Qualificado", "feio", "tolerante", "orgulhoso", "ignorante", "lutador", "desejado",
-"exigente", "nostálgico", "próspero", "compreensivo", "excelente", "estourado", "malvado",
-"windsurfista", "falso", "melhor", "terno"
+    "prepotente", "valioso", "legítimo", "desleixado", "Natural", "inteligente", "disciplinado",
+  "louvável", "amargurado", "honesto", "odioso", "vergonhoso", "horroroso", "magnífico", "gordo",
+  "romântico", "sublime", "mesquinho", "injusto", "medroso", "otário", "quente", "intenso", "Sábio",
+  "zeloso", "desapegado", "faceiro", "companheiro", "empenhado", "espantoso", "traidor",
+  "perfeccionista", "Qualificado", "feio", "tolerante", "orgulhoso", "ignorante", "lutador", "desejado",
+  "exigente", "nostálgico", "próspero", "compreensivo", "excelente", "estourado", "malvado",
+  "windsurfista", "falso", "melhor", "terno"
 ]
-
-const body = document.body
 
 let randomNames = []
+let prodName = []
+let nameProd = []
 let count = 0
-while (count < 6) {
-  let prodName = []
-  let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
-  let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
-  let product = `${randomVerb} ${randomAdj}`
-  randomNames.push(product)
-  prodName = localStorage.setItem('product', JSON.stringify(randomNames))
-  console.log(randomNames)
-  count++
+  while (count < 12) {
+    let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
+    let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
+    let product = `${randomVerb} ${randomAdj}`
+    randomNames.push(product)
+    prodName = localStorage.getItem('name', count++)
+    nameProd= JSON.parse(prodName)
+    console.log(prodName)
+    count++ 
+  }
   
-}
-
 const LOCAL_STORAGE_KEY = "imagesList"
 const [imagesList, setImagesList] = useState()
 
@@ -156,37 +157,37 @@ const [imagesList, setImagesList] = useState()
         </TopList>
         <TopListContainer>
             <TopListItem>
-              <p>{randomNames[0]}</p>
+              <p>{nameProd[0]}</p>
               <Link to={`/Product/${image.id}`} key={image.id}>{photoList[0]}</Link>
               <h6>
-                O produto {randomNames[0]} é perfeito para o seu dia a dia, ajudando nas suas tarefas diárias de casa.
+                O produto {nameProd[0]} é perfeito para o seu dia a dia, ajudando nas suas tarefas diárias de casa.
               </h6>
               <button id='iconFav' value={clickOne} onClick={switchIconFavOne}>{favoriteOne}</button>
               <button id='iconCart' value={clickOne} onClick={switchIconCartOne}>{cartOne}</button>
             </TopListItem>
             <TopListItem>
-            <p>{randomNames[1]}</p>
-              {photoList[1]}
+            <p>{nameProd[1]}</p>
+            <Link to={`/Product/${image.id}`} key={image.id}>{photoList[1]}</Link>
               <h6>
-                O produto {randomNames[1]} é te ajudará a melhorar sua auto estima e conquistar sua auto confiança.
+                O produto {nameProd[1]} é te ajudará a melhorar sua auto estima e conquistar sua auto confiança.
               </h6>
               <button id='iconFav' value={clickTwo} onClick={switchIconFavTwo}>{favoriteTwo}</button>
               <button id='iconCart' value={clickTwo} onClick={switchIconCartTwo}>{cartTwo}</button>
             </TopListItem>
             <TopListItem>
-            <p>{randomNames[2]}</p>
-              {photoList[2]}
+            <p>{nameProd[2]}</p>
+            <Link to={`/Product/${image.id}`} key={image.id}>{photoList[2]}</Link>
               <h6>
-                Com {randomNames[2]} você ouvirá os melhores graves que um produto pode lhe oferecer.
+                Com {nameProd[2]} você ouvirá os melhores graves que um produto pode lhe oferecer.
               </h6>
               <button id='iconFav' value={clickThree} onClick={switchIconFavThree}>{favoriteThree}</button>
               <button id='iconCart' value={clickThree} onClick={switchIconCartThree}>{cartThree}</button>
             </TopListItem>
             <TopListItem>
-              <p>{randomNames[3]}</p>
-              {photoList[9]}
+              <p>{nameProd[3]}</p>
+              <Link to={`/Product/${image.id}`} key={image.id}>{photoList[3]}</Link>
               <h6>
-                O produto {randomNames[3]} te oferecerá grandes experiências e sofisticação.
+                O produto {nameProd[3]} te oferecerá grandes experiências e sofisticação.
               </h6>
               <button id='iconFav' value={clickFour} onClick={switchIconFavFour}>{favoriteFour}</button>
               <button id='iconCart' value={clickFour} onClick={switchIconCartFour}>{cartFour}</button>
