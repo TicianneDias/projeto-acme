@@ -29,24 +29,41 @@ const ListBestSellers = () => {
   "windsurfista", "falso", "melhor", "terno"
 ]
 
-let randomNames = []
-let prodName = []
-let nameProd = []
-let count = 0
-  while (count < 12) {
-    let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
-    let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
-    let product = `${randomVerb} ${randomAdj}`
-    randomNames.push(product)
-    prodName = localStorage.getItem('name', count++)
-    nameProd= JSON.parse(prodName)
-    console.log(prodName)
-    count++ 
-  }
-  
-const LOCAL_STORAGE_KEY = "imagesList"
-const [imagesList, setImagesList] = useState()
 
+
+// const getNameFunction = () => {
+  
+//     let randomNames = []
+//     let prodName = []
+//     let nameProd = []
+//     let count = 0
+//     if (count < 12) {
+//       let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
+//       let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
+//       let product = `${randomVerb} ${randomAdj}`
+//       randomNames.push(product)
+//       prodName = localStorage.getItem('name', count++)
+//       nameProd= JSON.parse(prodName)
+//       console.log(prodName)
+//       count++ 
+//     }
+//   }
+//   if(prodName==null) {
+//     return
+//   } else {
+//     getNameFunction
+// }
+let randomNames = []
+    let count = 0
+    while (count < 8) {
+      let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
+      let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
+      let product = `${randomVerb} ${randomAdj}`
+      randomNames.push(product)
+      count++
+            console.log(product)
+    }
+  
   const [image, setImage] = useState([])
   const [clickOne, setClickOne] = useState(false)
   const [clickTwo, setClickTwo] = useState(false)
@@ -157,37 +174,37 @@ const [imagesList, setImagesList] = useState()
         </TopList>
         <TopListContainer>
             <TopListItem>
-              <p>{nameProd[0]}</p>
+              <p>{randomNames[0]}</p>
               <Link to={`/Product/${image.id}`} key={image.id}>{photoList[0]}</Link>
               <h6>
-                O produto {nameProd[0]} é perfeito para o seu dia a dia, ajudando nas suas tarefas diárias de casa.
+                O produto {randomNames[0]} é perfeito para o seu dia a dia, ajudando nas suas tarefas diárias de casa.
               </h6>
               <button id='iconFav' value={clickOne} onClick={switchIconFavOne}>{favoriteOne}</button>
               <button id='iconCart' value={clickOne} onClick={switchIconCartOne}>{cartOne}</button>
             </TopListItem>
             <TopListItem>
-            <p>{nameProd[1]}</p>
+            <p>{randomNames[1]}</p>
             <Link to={`/Product/${image.id}`} key={image.id}>{photoList[1]}</Link>
               <h6>
-                O produto {nameProd[1]} é te ajudará a melhorar sua auto estima e conquistar sua auto confiança.
+                O produto {randomNames[1]} é te ajudará a melhorar sua auto estima e conquistar sua auto confiança.
               </h6>
               <button id='iconFav' value={clickTwo} onClick={switchIconFavTwo}>{favoriteTwo}</button>
               <button id='iconCart' value={clickTwo} onClick={switchIconCartTwo}>{cartTwo}</button>
             </TopListItem>
             <TopListItem>
-            <p>{nameProd[2]}</p>
+            <p>{randomNames[2]}</p>
             <Link to={`/Product/${image.id}`} key={image.id}>{photoList[2]}</Link>
               <h6>
-                Com {nameProd[2]} você ouvirá os melhores graves que um produto pode lhe oferecer.
+                Com {randomNames[2]} você ouvirá os melhores graves que um produto pode lhe oferecer.
               </h6>
               <button id='iconFav' value={clickThree} onClick={switchIconFavThree}>{favoriteThree}</button>
               <button id='iconCart' value={clickThree} onClick={switchIconCartThree}>{cartThree}</button>
             </TopListItem>
             <TopListItem>
-              <p>{nameProd[3]}</p>
+              <p>{randomNames[3]}</p>
               <Link to={`/Product/${image.id}`} key={image.id}>{photoList[3]}</Link>
               <h6>
-                O produto {nameProd[3]} te oferecerá grandes experiências e sofisticação.
+                O produto {randomNames[3]} te oferecerá grandes experiências e sofisticação.
               </h6>
               <button id='iconFav' value={clickFour} onClick={switchIconFavFour}>{favoriteFour}</button>
               <button id='iconCart' value={clickFour} onClick={switchIconCartFour}>{cartFour}</button>
