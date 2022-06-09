@@ -29,7 +29,7 @@ Projeto desenvolvido para mostrar produtos de uma empresa fictícia chamada Acme
 Em Home é mostrado uma lista de produtos mais procurados e outros mais vendidos, com a possibilidade de adicionar o produto a favoritos ou carrinho.
 Em Produtos segue a mesma linha, mas ao invés de mostrar 4 produtos mais procurados, mostra uma lista de 8 produtos.
 
-Para adicionar: conseguir puxar os dados para página de favoritos, produto individual e carrinho, localstorage, colocar funcionalidade no botão de Pesquisar do Nav.
+Para adicionar: conseguir puxar os dados para página de favoritos, produto individual e carrinho, localstorage para imagens, colocar funcionalidade no botão de Pesquisar do Nav.
 
 <br>
 <br><br>
@@ -61,8 +61,9 @@ Para entrar no site colocado no Netlify, <a href='https://famous-clafoutis-be2c7
     <li>Rooks: useState, useEffect</li>
     <li>React Router Dom</li>
     <li>Figma</li>
-    <li>Styles-components</li>
-    <li>Axios</li>
+    <li>Styled-components</li>
+    <li>Consumo de API com Axios</li>
+    <li>LocalStorage nos nomes dos produtos</li>
 </ul>
 
 

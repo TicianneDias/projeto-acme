@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import ListFavorites from '../../components/ListFavorites/ListFavorites'
 import { ProductList, ProductItem } from './styles'
 import axios from 'axios'
-
+import { Link } from 'react-router-dom'
 import {BsHeart, BsHeartFill} from 'react-icons/bs'
 import {MdOutlineAddShoppingCart, MdShoppingCart} from 'react-icons/md'
 
@@ -252,7 +252,7 @@ const ProductsList = () => {
         <ProductList>
             <ProductItem>
             <p>{randomNames[0]}</p>
-              {photoList[0]}
+            <Link to={`/Product/${image.id}`} key={image.id}>{photoList[0]}</Link>
               <h6>
                 O produto {randomNames[0]} é perfeito para o seu dia a dia, ajudando nas suas tarefas diárias de casa.
               </h6>
@@ -261,7 +261,7 @@ const ProductsList = () => {
             </ProductItem>
             <ProductItem>
             <p>{randomNames[1]}</p>
-              {photoList[1]}
+            <Link to={`/Product/${image.id}`} key={image.id}>{photoList[1]}</Link>
               <h6>
                 O produto {randomNames[1]} é perfeito para o seu dia a dia, ajudando nas suas tarefas diárias de casa.
               </h6>
@@ -270,7 +270,7 @@ const ProductsList = () => {
             </ProductItem>
             <ProductItem>
             <p>{randomNames[2]}</p>
-              {photoList[2]}
+            <Link to={`/Product/${image.id}`} key={image.id}>{photoList[2]}</Link>
               <h6>
                 Com {randomNames[2]} você ouvirá os melhores graves que um produto pode lhe oferecer.
               </h6>
@@ -279,7 +279,7 @@ const ProductsList = () => {
             </ProductItem>
             <ProductItem>
             <p>{randomNames[3]}</p>
-              {photoList[9]}
+            <Link to={`/Product/${image.id}`} key={image.id}>{photoList[3]}</Link>
               <h6>
                 O produto {randomNames[3]} te oferecerá grandes experiências e sofisticação.
               </h6>
@@ -288,7 +288,7 @@ const ProductsList = () => {
             </ProductItem>
             <ProductItem>
             <p>{randomNames[4]}</p>
-              {photoList[10]}
+            <Link to={`/Product/${image.id}`} key={image.id}>{photoList[4]}</Link>
               <h6>
                 O produto {randomNames[4]} será perfeito para o seu uso no dia-a-dia.
               </h6>
@@ -297,7 +297,7 @@ const ProductsList = () => {
             </ProductItem>
             <ProductItem>
             <p>{randomNames[5]}</p>
-              {photoList[11]}
+            <Link to={`/Product/${image.id}`} key={image.id}>{photoList[5]}</Link>
               <h6>
                 O produto {randomNames[5]} traz o aroma que você precisa para usar no seu trabalho.
               </h6>
@@ -306,7 +306,7 @@ const ProductsList = () => {
             </ProductItem>
             <ProductItem>
             <p>{randomNames[6]}</p>
-              {photoList[12]}
+            <Link to={`/Product/${image.id}`} key={image.id}>{photoList[6]}</Link>
               <h6>
                Com {randomNames[6]} você conseguirá vencer grandes batalhas diárias.
               </h6>
@@ -315,7 +315,7 @@ const ProductsList = () => {
             </ProductItem>
             <ProductItem>
             <p>{randomNames[7]}</p>
-              {photoList[13]}
+            <Link to={`/Product/${image.id}`} key={image.id}>{photoList[7]}</Link>
               <h6>
                 A {randomNames[7]} traz o aroma perfeito que sua casa está precisando.
               </h6>

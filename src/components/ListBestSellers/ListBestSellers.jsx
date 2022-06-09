@@ -27,8 +27,6 @@ const ListBestSellers = () => {
 "windsurfista", "falso", "melhor", "terno"
 ]
 
-const body = document.body
-
 let randomNames = []
 
 let count = 0
@@ -55,7 +53,6 @@ while (count < 10) {
   count++
 }
 
-const LOCAL_STORAGE_KEY = "imagesList"
 const [imagesList, setImagesList] = useState()
 
   const [image, setImage] = useState([])
@@ -178,7 +175,7 @@ const [imagesList, setImagesList] = useState()
             </TopListItem>
             <TopListItem>
             <p>{randomNames[1]}</p>
-              {photoList[1]}
+            <Link to={`/Product/${image.id}`} key={image.id}>{photoList[1]}</Link>
               <h6>
                 O produto {randomNames[1]} é te ajudará a melhorar sua auto estima e conquistar sua auto confiança.
               </h6>
@@ -187,7 +184,7 @@ const [imagesList, setImagesList] = useState()
             </TopListItem>
             <TopListItem>
             <p>{randomNames[2]}</p>
-              {photoList[2]}
+            <Link to={`/Product/${image.id}`} key={image.id}>{photoList[2]}</Link>
               <h6>
                 Com {randomNames[2]} você ouvirá os melhores graves que um produto pode lhe oferecer.
               </h6>
@@ -196,7 +193,7 @@ const [imagesList, setImagesList] = useState()
             </TopListItem>
             <TopListItem>
               <p>{randomNames[3]}</p>
-              {photoList[9]}
+              <Link to={`/Product/${image.id}`} key={image.id}>{photoList[3]}</Link>
               <h6>
                 O produto {randomNames[3]} te oferecerá grandes experiências e sofisticação.
               </h6>
