@@ -22,14 +22,14 @@ export const HeaderContainer = styled.div`
         color: var(--color-secundary);
         position: absolute;
         top: 15%;
-        left: 30%;
+        left: 33%;
     }
 
     h2 {
         color: var(--color-white);
         position: absolute;
         top: 30%;
-        left: 30%;
+        left: 33%;
     }
 `;
 
