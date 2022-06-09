@@ -13,7 +13,7 @@ export const TopList = styled.div`
         text-decoration: none;
         color: var(--color-lightdark);
         position: absolute;
-        top: 35%;
+        top: 50%;
         left: 85%;
         font-weight: 200;
         
@@ -26,15 +26,17 @@ export const TopList = styled.div`
     
     h2 {
         position: absolute;
-        top: center;
+        top: 35%;
         left: 5%;
     }
     
     @media(max-width: 905px) {
         h2 {
+            top: auto;
             left: auto;
         }
         a {
+            top: auto;
             left: 80%;
         }
     }
