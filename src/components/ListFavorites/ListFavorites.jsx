@@ -25,19 +25,28 @@ const ListFavorites = () => {
     
     let randomNames = []
     let count = 0
-while (count < 6) {
-  let prodName = []
-  let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
-  let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
-  let product = `${randomVerb} ${randomAdj}`
-  if(localStorage.getItem('product')){
-    randomNames = JSON.parse(localStorage.getItem('product'))
-  }
-  randomNames.push(product)
-  prodName = localStorage.setItem('product', JSON.stringify(randomNames))
-  //console.log(randomNames)
-  count++
-}
+    while (count < 10) {
+      let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
+      let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
+      let product = `${randomVerb} ${randomAdj}`
+      let randomNameslength
+      if(localStorage.getItem('product')){
+    
+        randomNameslength = JSON.parse(localStorage.getItem('product')).length
+      }else{
+        randomNameslength = 0
+      }
+      if(randomNameslength>=10){
+        randomNames = JSON.parse(localStorage.getItem('product'))
+        console.log(randomNameslength)
+      }else{
+        let prodName = []
+        randomNames.push(product)
+        prodName = localStorage.setItem('product', JSON.stringify(randomNames))
+      }
+      //console.log(randomNames)
+      count++
+    }
     const [image, setImage] = useState([])
     
     useEffect(() => {
