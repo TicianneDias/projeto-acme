@@ -26,7 +26,7 @@ export const FavoriteList = styled.div`
 
     h2 {
         position: absolute;
-        top: 35%;
+        top: 28%;
         left: 5%;
     }
 
