@@ -25,13 +25,19 @@ const ListFavorites = () => {
     
     let randomNames = []
     let count = 0
-    while (count < 6) {
-      let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
-      let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
-      let product = `${randomVerb} ${randomAdj}`
-      randomNames.push(product)
-      count++
-    }
+while (count < 6) {
+  let prodName = []
+  let randomVerb = verbs[Math.floor(Math.random() * verbs.length)]
+  let randomAdj = adjectives[Math.floor(Math.random() * adjectives.length)]
+  let product = `${randomVerb} ${randomAdj}`
+  if(localStorage.getItem('product')){
+    randomNames = JSON.parse(localStorage.getItem('product'))
+  }
+  randomNames.push(product)
+  prodName = localStorage.setItem('product', JSON.stringify(randomNames))
+  //console.log(randomNames)
+  count++
+}
     const [image, setImage] = useState([])
     
     useEffect(() => {
